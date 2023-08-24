@@ -31,6 +31,6 @@ chmod +x ./mcl
 ./mcl << EOF
 exit
 EOF
-https://github.com/MrXiaoM/qsign/releases/download/${QSIGN_VERSION}/qsign-${MCL_VERSION#v}-all.zip && unzip qsign-${MCL_VERSION#v}-all.zip
+https://github.com/MrXiaoM/qsign/releases/download/${QSIGN_VERSION}/qsign-${QSIGN_VERSION#v}-all.zip && unzip qsign-${QSIGN_VERSION#v}-all.zip
 
 tree -d ../app

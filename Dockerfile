@@ -8,4 +8,4 @@ WORKDIR /app
 
 COPY ./app /app/
 
-ENTRYPOINT ["/app/mcl"]
+ENTRYPOINT ["/app/mcl -u && /app/mcl"]

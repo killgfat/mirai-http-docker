@@ -41,4 +41,4 @@ jobs:
           platforms: 'linux/amd64,linux/arm64'
           push: true
           tags: |
-            lss233/mirai-http:latest
+            ${{ secrets.DOCKERHUB_USERNAME }}/mirai-http:latest

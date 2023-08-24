@@ -1,6 +1,7 @@
 #!/bin/bash
 
 MCL_VERSION=`wget -qO- -t1 -T2 "https://api.github.com/repos/iTXTech/mcl-installer/releases/latest" | grep "tag_name" | head -n 1 | awk -F ":" '{print $2}' | sed 's/\"//g;s/,//g;s/ //g'`
+QSIGN_VERSION=`wget -qO- -t1 -T2 "https://api.github.com/repos/MrXiaoM/qsign/releases/latest" | grep "tag_name" | head -n 1 | awk -F ":" '{print $2}' | sed 's/\"//g;s/,//g;s/ //g'`
 # Exit if any error occured
 set -euxo pipefail
 
@@ -30,5 +31,6 @@ chmod +x ./mcl
 ./mcl << EOF
 exit
 EOF
+https://github.com/MrXiaoM/qsign/releases/download/${QSIGN_VERSION}/qsign-${MCL_VERSION#v}-all.zip && unzip qsign-${MCL_VERSION#v}-all.zip
 
 tree -d ../app
